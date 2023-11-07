@@ -1,0 +1,63 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AutomationAnywhereHomePageLinksTest {
+    public static void main(String[] args) {
+        // Set the path to the ChromeDriver executable
+        System.setProperty("webdriver.chrome.driver", "path_to_chromedriver.exe");
+
+        // Initialize the WebDriver
+        WebDriver driver = new ChromeDriver();
+
+        // Navigate to the website
+        driver.get("https://www.automationanywhere.com/");
+
+        try {
+            // Define the link texts and corresponding URLs
+            String[] linkTexts = {"Products", "Solutions", "Resources", "Beyond RPA", "Company"};
+            String[] expectedUrls = {
+                "https://www.automationanywhere.com/products",
+                "https://www.automationanywhere.com/solutions",
+                "https://www.automationanywhere.com/resources",
+                "https://www.automationanywhere.com/beyond-rpa",
+                "https://www.automationanywhere.com/company"
+            };
+
+            for (int i = 0; i < linkTexts.length; i++) {
+                // Find the link by its text
+                WebElement link = driver.findElement(By.xpath("//a[contains(text(), '" + linkTexts[i] + "')]"));
+
+                // Verify the link is present
+                if (link.isDisplayed()) {
+                    System.out.println(linkTexts[i] + " link is present.");
+                } else {
+                    System.out.println(linkTexts[i] + " link is not present.");
+                    continue;
+                }
+
+                // Click on the link
+                link.click();
+
+                // Wait for the page to load
+                Thread.sleep(2000);
+
+                // Verify the URL of the current page matches the expected URL
+                if (driver.getCurrentUrl().equals(expectedUrls[i])) {
+                    System.out.println(linkTexts[i] + " link navigates to the proper page.");
+                } else {
+                    System.out.println(linkTexts[i] + " link does not navigate to the proper page.");
+                }
+
+                // Go back to the homepage for the next iteration
+                driver.navigate().back();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // Close the browser
+            driver.quit();
+        }
+    }
+}

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-AutomationAnywhereTests" class="navigator-link">
+              <span class="suite-name border-passed">AutomationAnywhereTests</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-AutomationAnywhereTests" class="navigator-link ">
+                    <span>C:\Users\Aravi\Automation\Aravind\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-AutomationAnywhereTests" class="navigator-link ">
+                    <span class="test-stats">2 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-AutomationAnywhereTests" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-AutomationAnywhereTests" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-AutomationAnywhereTests" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-AutomationAnywhereTests" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-AutomationAnywhereTests" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">8 methods,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-AutomationAnywhereTests" class="hide-methods passed suite-AutomationAnywhereTests"> (hide)</a> <!-- hide-methods passed suite-AutomationAnywhereTests -->
+                      <a href="#" panel-name="suite-AutomationAnywhereTests" class="show-methods passed suite-AutomationAnywhereTests"> (show)</a> <!-- show-methods passed suite-AutomationAnywhereTests -->
+                    </span>
+                    <div class="method-list-content passed suite-AutomationAnywhereTests">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AutomationAnywhereTests" title="testng.Program2" class="method navigator-link" hash-for-method="handleCookiePopup">handleCookiePopup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AutomationAnywhereTests" title="testng.Program1" class="method navigator-link" hash-for-method="setup">setup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AutomationAnywhereTests" title="testng.Program2" class="method navigator-link" hash-for-method="setup">setup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AutomationAnywhereTests" title="testng.Program1" class="method navigator-link" hash-for-method="tearDown">tearDown</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AutomationAnywhereTests" title="testng.Program2" class="method navigator-link" hash-for-method="tearDown">tearDown</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AutomationAnywhereTests" title="testng.Program2" class="method navigator-link" hash-for-method="verifyLinksAndNavigation">verifyLinksAndNavigation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AutomationAnywhereTests" title="testng.Program1" class="method navigator-link" hash-for-method="verifyLogo">verifyLogo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AutomationAnywhereTests" title="testng.Program1" class="method navigator-link" hash-for-method="verifyRequestDemoButton">verifyRequestDemoButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-AutomationAnywhereTests -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-AutomationAnywhereTests" class="panel AutomationAnywhereTests">
+          <div class="suite-AutomationAnywhereTests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testng.Program2</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="handleCookiePopup">
+                  </a> <!-- handleCookiePopup -->
+                  <span class="method-name">handleCookiePopup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="setup">
+                  </a> <!-- setup -->
+                  <span class="method-name">setup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tearDown">
+                  </a> <!-- tearDown -->
+                  <span class="method-name">tearDown</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLinksAndNavigation">
+                  </a> <!-- verifyLinksAndNavigation -->
+                  <span class="method-name">verifyLinksAndNavigation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AutomationAnywhereTests-class-passed -->
+          <div class="suite-AutomationAnywhereTests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testng.Program1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="setup">
+                  </a> <!-- setup -->
+                  <span class="method-name">setup</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tearDown">
+                  </a> <!-- tearDown -->
+                  <span class="method-name">tearDown</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogo">
+                  </a> <!-- verifyLogo -->
+                  <span class="method-name">verifyLogo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRequestDemoButton">
+                  </a> <!-- verifyRequestDemoButton -->
+                  <span class="method-name">verifyRequestDemoButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AutomationAnywhereTests-class-passed -->
+        </div> <!-- panel AutomationAnywhereTests -->
+        <div panel-name="test-xml-AutomationAnywhereTests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\Aravi\Automation\Aravind\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;AutomationAnywhereTests&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Program1Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testng.Program1&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Program1Test --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Program2Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testng.Program2&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Program2Test --&gt;
+&lt;/suite&gt; &lt;!-- AutomationAnywhereTests --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-AutomationAnywhereTests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for AutomationAnywhereTests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Program1Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Program2Test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-AutomationAnywhereTests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for AutomationAnywhereTests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-AutomationAnywhereTests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for AutomationAnywhereTests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_AutomationAnywhereTests');
+function tableData_AutomationAnywhereTests() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(8);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'verifyLinksAndNavigation')
+data.setCell(0, 2, 'testng.Program2')
+data.setCell(0, 3, 60371);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'setup')
+data.setCell(1, 2, 'testng.Program1')
+data.setCell(1, 3, 11756);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'setup')
+data.setCell(2, 2, 'testng.Program2')
+data.setCell(2, 3, 9105);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'tearDown')
+data.setCell(3, 2, 'testng.Program2')
+data.setCell(3, 3, 656);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'tearDown')
+data.setCell(4, 2, 'testng.Program1')
+data.setCell(4, 3, 477);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'handleCookiePopup')
+data.setCell(5, 2, 'testng.Program2')
+data.setCell(5, 3, 417);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyLogo')
+data.setCell(6, 2, 'testng.Program1')
+data.setCell(6, 3, 124);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyRequestDemoButton')
+data.setCell(7, 2, 'testng.Program1')
+data.setCell(7, 3, 89);
+window.suiteTableData['AutomationAnywhereTests']= { tableData: data, tableDiv: 'times-div-AutomationAnywhereTests'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-AutomationAnywhereTests">
+              </div> <!-- times-div-AutomationAnywhereTests -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-AutomationAnywhereTests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for AutomationAnywhereTests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-AutomationAnywhereTests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-AutomationAnywhereTests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">testng.Program1</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyLogo</span>
+                <span class="method-start">11769 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyRequestDemoButton</span>
+                <span class="method-start">11896 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">11991 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testng.Program2</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">setup</span>
+                <span class="method-start">12583 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">handleCookiePopup</span>
+                <span class="method-start">21691 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyLinksAndNavigation</span>
+                <span class="method-start">22111 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">82507 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

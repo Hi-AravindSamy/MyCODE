@@ -1,0 +1,54 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class AutomationAnywhereHomePageLinksTest {
+    public static void main(String[] args) {
+        // Set the path to the ChromeDriver executable
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aravi\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+
+        // Initialize the WebDriver
+        WebDriver driver = new ChromeDriver();
+
+        // Navigate to the website
+        driver.get("https://www.automationanywhere.com/");
+
+        try {
+            // Handle the cookie popup
+            WebElement acceptCookiesButton = driver.findElement(By.xpath("//button[contains(text(), 'Accept All Cookies')]"));
+            if (acceptCookiesButton.isDisplayed()) {
+                acceptCookiesButton.click();
+            }
+
+            // Define the list of links to verify
+            String[] linksToVerify = {"Products", "Solutions", "Resources", "Beyond RPA", "Company"};
+
+            // Loop through the links and verify navigation
+            for (String linkText : linksToVerify) {
+                WebElement link = driver.findElement(By.xpath("//a[contains(text(), '" + linkText + "')]"));
+                if (link.isDisplayed()) {
+                    // Click the link
+                    Actions actions = new Actions(driver);
+                    actions.moveToElement(link).click().perform();
+
+                    // Verify the page has loaded by checking the page title
+                    String expectedTitle = "https://www.automationanywhere.com/"+linkText+"";
+                    if (driver.getCurrentUrl().equals(expectedTitle)) {
+                        System.out.println(linkText + " link navigated to the proper page.");
+                    } else {
+                        System.out.println(linkText + " link did not navigate to the proper page.");
+                    }
+
+                    // Navigate back to the home page
+                    driver.navigate().back();
+                } else {
+                    System.out.println(linkText + " link is not present on the home page.");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+    }
+}

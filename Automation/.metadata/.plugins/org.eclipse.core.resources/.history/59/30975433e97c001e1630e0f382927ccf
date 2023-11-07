@@ -1,0 +1,72 @@
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ReadAndWriteData {
+    public static void main(String[] args) {
+        List<ExcelData> data = readExcelData("data.xlsx");
+        displayData(data);
+    }
+
+    public static List<ExcelData> readExcelData(String filePath) {
+        List<ExcelData> data = new ArrayList<>();
+
+        try (FileInputStream fis = new FileInputStream(new File(filePath));
+             Workbook workbook = new XSSFWorkbook(fis)) {
+            Sheet sheet = workbook.getSheetAt(0);
+
+            for (Row row : sheet) {
+                if (row.getRowNum() == 0) {
+                    // Skip the header row
+                    continue;
+                }
+
+                String name = row.getCell(0).getStringCellValue();
+                String course = row.getCell(1).getStringCellValue();
+                String fee = row.getCell(2).getStringCellValue();
+
+                data.add(new ExcelData(name, course, fee));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return data;
+    }
+
+    public static void displayData(List<ExcelData> data) {
+        System.out.println("Name\tCourses\tFee");
+        for (ExcelData excelData : data) {
+            System.out.println(excelData.getName() + "\t" + excelData.getCourses() + "\t" + excelData.getFee());
+        }
+    }
+}
+
+class ExcelData {
+    private String name;
+    private String courses;
+    private String fee;
+
+    public ExcelData(String name, String courses, String fee) {
+        this.name = name;
+        this.courses = courses;
+        this.fee = fee;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCourses() {
+        return courses;
+    }
+
+    public String getFee() {
+        return fee;
+    }
+}
